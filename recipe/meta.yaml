@@ -1,8 +1,8 @@
 {% set name = "dtool_create" %}
 {% set reponame = "dtool-create" %}
 {% set author = "jic-dtool" %}
-{% set version = "0.22.0" %}
-{% set sha256 = "3c2835291ed110d9568bdb637d46f4b42fac6a076fc8b725efdcf65ebc01659b" %}
+{% set version = "0.23.0" %}
+{% set sha256 = "899c3ea30aa582b7b77089cf07516e3635482c06cbf47d3b769db52d31876914" %}
 
 package:
   name: {{ name|lower }}
@@ -15,8 +15,8 @@ source:
 build:
   number: 0
   noarch: python
-  preserve_egg_dir: True
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  preserve_egg_dir: true
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -52,7 +52,7 @@ about:
   home: http://github.com/{{ author }}/{{ reponame }}
   license: MIT
   license_file: LICENSE.rst
-  summary: 'dtool CLI commands for creating datasets'
+  summary: dtool CLI commands for creating datasets
 
   dev_url: https://github.com/{{ author }}/{{ reponame }}
 
