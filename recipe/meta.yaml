@@ -1,8 +1,8 @@
 {% set name = "dtool_create" %}
 {% set reponame = "dtool-create" %}
 {% set author = "jic-dtool" %}
-{% set version = "0.22.0" %}
-{% set sha256 = "3c2835291ed110d9568bdb637d46f4b42fac6a076fc8b725efdcf65ebc01659b" %}
+{% set version = "0.23.3" %}
+{% set sha256 = "bd449370eca83b3444688bbd8f4822b7f20376f54e5a1504d8ac50df5efd9fa7" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   preserve_egg_dir: True
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
