@@ -1,21 +1,17 @@
 {% set name = "dtool_create" %}
-{% set reponame = "dtool-create" %}
-{% set author = "jic-dtool" %}
 {% set version = "0.23.3" %}
-{% set sha256 = "bd449370eca83b3444688bbd8f4822b7f20376f54e5a1504d8ac50df5efd9fa7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/{{ author }}/{{ reponame }}/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/dtool-create/dtool-create-{{ version }}.tar.gz
+  sha256: "9cecb766c3ce3d2a0b10d5317517d3e50df77bf3231fe6c2c0215a9200b8f094"
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  preserve_egg_dir: True
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -49,12 +45,12 @@ test:
     - dtool publish --help
 
 about:
-  home: http://github.com/{{ author }}/{{ reponame }}
+  home: https://github.com/jic-dtool/dtool-create
   license: MIT
   license_file: LICENSE.rst
   summary: 'dtool CLI commands for creating datasets'
-
-  dev_url: https://github.com/{{ author }}/{{ reponame }}
+  doc_url: https://github.com/jic-dtool/dtool-create
+  dev_url: https://github.com/jic-dtool/dtool-create
 
 extra:
   recipe-maintainers:
