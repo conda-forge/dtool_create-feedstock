@@ -9,13 +9,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/{{ author }}/{{ reponame }}/archive/{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/dtool-create/dtool-create-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  preserve_egg_dir: True
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
