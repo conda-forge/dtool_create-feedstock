@@ -1,8 +1,8 @@
 {% set name = "dtool_create" %}
 {% set reponame = "dtool-create" %}
 {% set author = "jic-dtool" %}
-{% set version = "0.22.0" %}
-{% set sha256 = "3c2835291ed110d9568bdb637d46f4b42fac6a076fc8b725efdcf65ebc01659b" %}
+{% set version = "0.23.3" %}
+{% set sha256 = "bd449370eca83b3444688bbd8f4822b7f20376f54e5a1504d8ac50df5efd9fa7" %}
 
 package:
   name: {{ name|lower }}
@@ -20,10 +20,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - click
     - setuptools
     - dtoolcore
@@ -59,3 +59,4 @@ about:
 extra:
   recipe-maintainers:
     - pvanheus
+    - jan-janssen
