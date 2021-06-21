@@ -1,7 +1,7 @@
 About dtool_create
 ==================
 
-Home: http://github.com/jic-dtool/dtool-create
+Home: https://github.com/jic-dtool/dtool-create
 
 Package license: MIT
 
@@ -10,6 +10,8 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dtool_create-fe
 Summary: dtool CLI commands for creating datasets
 
 Development: https://github.com/jic-dtool/dtool-create
+
+Documentation: https://github.com/jic-dtool/dtool-create
 
 Current build status
 ====================
@@ -119,4 +121,5 @@ Feedstock Maintainers
 
 * [@jan-janssen](https://github.com/jan-janssen/)
 * [@pvanheus](https://github.com/pvanheus/)
+* [@tjelvar-olsson](https://github.com/tjelvar-olsson/)
 
