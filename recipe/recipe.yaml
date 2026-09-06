@@ -15,7 +15,7 @@ source:
 build:
   number: 2
   noarch: python
-  script: ${{ PYTHON }} -m pip install . --no-deps -vv
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -25,7 +25,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - click
-    - setuptools
+    - setuptools <80
     - dtoolcore
     - dtool_cli
     - dtool_symlink
@@ -40,7 +40,9 @@ tests:
         - dtool_create.publish
         - dtool_create.utils
       pip_check: false
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}
+        - "*"
   - requirements:
       run:
         - python ${{ python_min }}.*
