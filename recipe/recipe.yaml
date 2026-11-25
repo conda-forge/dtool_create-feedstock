@@ -2,18 +2,18 @@ schema_version: 1
 
 context:
   name: dtool_create
-  version: "0.23.4"
+  version: "0.23.5"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/dtool-create/dtool-create-${{ version }}.tar.gz
-  sha256: db03446059fca9c2133adfb017d5d323d02aeec72b63517bc3a66349d7bf3d04
+  url: https://pypi.org/packages/source/${{ name[0] }}/dtool-create/${{ name }}-${{ version }}.tar.gz
+  sha256: 9299dbbe8fca2bcac1ab1536104b01b561f48417121140e7cbe2e5a2305d9f4b
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
